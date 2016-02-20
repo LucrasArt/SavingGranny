@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="65" height="10" tilewidth="70" tileheight="70">
+ <tileset firstgid="1" name="rocks2" tilewidth="70" tileheight="70" spacing="1">
+  <image source="rocks2.png" width="497" height="283"/>
+ </tileset>
+ <layer name="Background" width="65" height="10">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5Ux/gClUBAMAbCigAAQ==
+  </data>
+ </layer>
+ <layer name="Terrain" width="65" height="10">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUjIJRMArIA4yDxIxRQH3AOIpHMRADAJa4AIU=
+  </data>
+ </layer>
+ <layer name="Decoration" width="65" height="10">
+  <data encoding="base64" compression="zlib">
+   eJztwYEAAAAAw6D5Ux/gClUBAMAbCigAAQ==
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="65" height="10">
+  <object name="PlayerStart" x="70" y="490" width="70" height="70"/>
+  <object name="PlayerGoal" x="4200" y="490" width="70" height="70"/>
+  <object name="CheckPoint" x="2170" y="490" width="70" height="70"/>
+ </objectgroup>
+ <objectgroup name="Physics" width="65" height="10">
+  <object x="0" y="560" width="2450" height="140"/>
+  <object x="0" y="0" height="420"/>
+  <object x="770" y="420" width="70" height="70"/>
+  <object x="1960" y="420" width="70" height="70"/>
+  <object x="2450" y="560" width="700" height="140"/>
+  <object x="0" y="0" height="700"/>
+  <object x="0" y="0" height="910"/>
+  <object x="3150" y="560" width="1050" height="140"/>
+  <object x="4550" y="-140" width="70" height="910"/>
+  <object x="4200" y="560" width="350" height="140"/>
+ </objectgroup>
+ <objectgroup name="Wall" width="65" height="10">
+  <object x="630" y="490" width="70" height="70"/>
+  <object x="2100" y="0" width="70" height="70"/>
+  <object x="630" y="420" width="70" height="70"/>
+  <object x="630" y="350" width="70" height="70"/>
+  <object x="630" y="280" width="70" height="70"/>
+  <object x="630" y="210" width="70" height="70"/>
+  <object x="630" y="140" width="70" height="70"/>
+  <object x="630" y="70" width="70" height="70"/>
+  <object x="630" y="0" width="70" height="70"/>
+  <object x="2100" y="70" width="70" height="70"/>
+  <object x="2100" y="140" width="70" height="70"/>
+  <object x="2100" y="210" width="70" height="70"/>
+  <object x="2100" y="280" width="70" height="70"/>
+  <object x="2100" y="350" width="70" height="70"/>
+  <object x="2100" y="420" width="70" height="70"/>
+  <object x="2100" y="490" width="70" height="70"/>
+ </objectgroup>
+ <objectgroup name="Wolf" width="65" height="10">
+  <object x="1400" y="490" width="70" height="70"/>
+ </objectgroup>
+ <objectgroup name="Granny" width="65" height="10">
+  <object x="4270" y="490" width="70" height="70"/>
+ </objectgroup>
+ <objectgroup name="Huntsman" width="65" height="10">
+  <object x="770" y="350" width="70" height="70"/>
+ </objectgroup>
+</map>

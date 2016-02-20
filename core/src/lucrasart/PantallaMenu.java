@@ -1,7 +1,7 @@
 package lucrasart;
 
 import com.badlogic.gdx.Gdx;
-
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -17,12 +17,13 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.ui.Table;
 import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 
-//import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.scenes.scene2d.InputEvent;
 public class PantallaMenu extends AbstractScreen {
 
+	private Texture fondo;
+	
 	SpriteBatch batch;
 	Texture titulo;
 	Texture play;
@@ -41,24 +42,40 @@ public class PantallaMenu extends AbstractScreen {
 	
 	Table tableMenu, tableStuff, tableAbout;
 	
-	public PantallaMenu(SavingGrannyMain main) {
+	public static Sound clickSound;
+	
+	public PantallaMenu(SavingGrannyMain main) 
+	{
 		super(main);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	
 	@Override
 	public void show() {
-		// TODO Auto-generated method stub
+		
+		clickSound = Gdx.audio.newSound(Gdx.files.internal("Audio/click2.wav"));
+		
+		fondo = new Texture("Menu/fondo.png");
+		Image background = new Image(fondo);
+		
 		batch = new SpriteBatch();
-		titulo = new Texture(Gdx.files.internal("titulo1.png"));
-		play = new Texture(Gdx.files.internal("start1.png"));
-		quit = new Texture(Gdx.files.internal("exit1.png"));
-		stuff = new Texture(Gdx.files.internal("stuff1.png"));
-		stuffN = new Texture(Gdx.files.internal("stuff-inside.png"));
-		back = new Texture (Gdx.files.internal("back.png"));
-		about = new Texture(Gdx.files.internal("about.png"));
-		controlsImage = new Texture (Gdx.files.internal("controls.png"));
+
+		titulo = new Texture(Gdx.files.internal("Menu/SV.png"));
+	
+		play = new Texture(Gdx.files.internal("Menu/startB.png"));
+	
+		quit = new Texture(Gdx.files.internal("Menu/exitB.png"));
+
+		stuff = new Texture(Gdx.files.internal("Menu/controlsB.png"));
+
+		stuffN = new Texture(Gdx.files.internal("Menu/insideInfo.png"));
+	
+		back = new Texture (Gdx.files.internal("Menu/backB.png"));
+
+		about = new Texture(Gdx.files.internal("Menu/infoB.png"));
+
+		controlsImage = new Texture (Gdx.files.internal("Menu/iControls3.png"));
 		
 		Image title = new Image(titulo); 
 		title.setPosition(200, 360);
@@ -66,7 +83,7 @@ public class PantallaMenu extends AbstractScreen {
 		Image mesagge = new Image(stuffN);
 		
 		Image control = new Image(controlsImage);
-		//control.setPosition(200, 200);
+
 		
 		skin = new Skin (Gdx.files.internal("skin/uiskin.json"));
 		
@@ -78,9 +95,6 @@ public class PantallaMenu extends AbstractScreen {
 		ibs.imageUp = textDraw;
 		
 		buttonPlay = new ImageButton(ibs);
-		
-
-		//buttonPlay = new ImageButton(textDraw);
 		
 		TextureRegion exitR = new TextureRegion(quit);
 		TextureRegionDrawable textExitDraw = new TextureRegionDrawable (exitR);
@@ -117,34 +131,34 @@ public class PantallaMenu extends AbstractScreen {
 		
 		 
 		 
-			//boton about
-			TextureRegion aboutB = new TextureRegion(about);
-			TextureRegionDrawable textAboutDraw = new TextureRegionDrawable (aboutB);
+		//boton about
+		TextureRegion aboutB = new TextureRegion(about);
+		TextureRegionDrawable textAboutDraw = new TextureRegionDrawable (aboutB);
 			
-			ImageButtonStyle ibsA = new ImageButtonStyle(skin.get(ButtonStyle.class));
+		ImageButtonStyle ibsA = new ImageButtonStyle(skin.get(ButtonStyle.class));
 			
-			ibsA.imageUp = textAboutDraw;
+		ibsA.imageUp = textAboutDraw;
 			
-			 buttonAbout = new ImageButton(ibsA);
+		 buttonAbout = new ImageButton(ibsA);
 		
-			//fin boton about
+		//fin boton about
+		 
 		stage = new Stage();
 		
 		tableMenu = new Table();
 		tableStuff = new Table();
 		tableAbout = new Table();
-		//table.setFillParent(true);
+
 		
+		stage.addActor(background);
 		stage.addActor(title);
 		stage.addActor(tableMenu);
 		stage.addActor(tableStuff);
 		stage.addActor(tableAbout);
-		//button.setPosition(50,50);
+
 		
 		Gdx.input.setInputProcessor(stage);
 		
-		//table.add(title).pad(10, 10, 10, 10).colspan(2);
-		//table.row();
 		tableMenu.add(buttonPlay).pad(10, 10, 10, 10).width(200).height(50);
 		tableMenu.row();
 		tableMenu.add(buttonStuff).pad(10, 10, 10, 10).width(200).height(50);
@@ -176,7 +190,9 @@ public class PantallaMenu extends AbstractScreen {
 		        public void clicked(InputEvent event, float x, float y)
 		         {
 
-		        	main.setScreen(new GameScreen(main));
+		        	//main.setScreen(new GameScreen1(main));
+		        	main.setScreen(new SelectLevel(main));
+		        	clickSound.play();
 		        	
 		        }
 		    });
@@ -187,8 +203,8 @@ public class PantallaMenu extends AbstractScreen {
 		       public void clicked(InputEvent event, float x, float y)
 		       {
 		        	//Dialog
-					
-					Label message = new Label("Dialog: Exit?", skin);
+		        	clickSound.play();
+					Label message = new Label("Exit the App", skin);
 					TextButton tb1 = new TextButton("Yes", skin);
 					tb1.addListener( new ClickListener()
 					{             
@@ -209,7 +225,6 @@ public class PantallaMenu extends AbstractScreen {
 					dialog.button(tb1);
 					dialog.button(tb2);
 					dialog.setModal(true);
-					//dialog.setBackground(trd);
 					dialog.pack();
 					dialog.setPosition(75, 130 - dialog.getHeight());
 					dialog.show(stage);
@@ -222,11 +237,10 @@ public class PantallaMenu extends AbstractScreen {
 		        @Override
 		        public void clicked(InputEvent event, float x, float y)
 		         {
-		     
-		        	//main.setScreen(new GameScreen(main));
-		        	//batch.draw(stuffN, 0, 0);
+		 
 		        	tableMenu.setVisible(false);
 		        	tableStuff.setVisible(true);
+		        	clickSound.play();
 		        	
 		        }
 		    });
@@ -239,6 +253,7 @@ public class PantallaMenu extends AbstractScreen {
 
 		        	tableMenu.setVisible(false);
 		        	tableAbout.setVisible(true);
+		        	clickSound.play();
 		        	
 		        }
 		    });
@@ -253,6 +268,7 @@ public class PantallaMenu extends AbstractScreen {
 		        	tableMenu.setVisible(true);
 		        	tableStuff.setVisible(false);
 		        	tableAbout.setVisible(false);
+		        	clickSound.play();
 		        	
 		        }
 		    });
@@ -266,6 +282,7 @@ public class PantallaMenu extends AbstractScreen {
 		        	tableMenu.setVisible(true);
 		        	tableStuff.setVisible(false);
 		        	tableAbout.setVisible(false);
+		        	clickSound.play();
 		        	
 		        }
 		    });
@@ -275,28 +292,26 @@ public class PantallaMenu extends AbstractScreen {
 
 	@Override
 	public void render(float delta) {
-		Gdx.gl.glClearColor(0.49f, 0.62f, 0.97f, 1);
-		//Gdx.gl.glClearColor(0.174f, 0.223f, 0.218f, 1);
+		Gdx.gl.glClearColor(0, 0, 0, 1); 
+
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
 		stage.act();
 		
-		
 		batch.begin();
 		
-
-		//batch.draw(titulo,200,50,500,500);
 		stage.draw();
 		
 		batch.end();
 	}
 	
 	@Override
-	public void dispose() {
-		// TODO Auto-generated method stub
+	public void dispose() 
+	{
 		titulo.dispose();
 		stage.dispose();
 		skin.dispose();
+		clickSound.dispose();
 		
 	}
 }

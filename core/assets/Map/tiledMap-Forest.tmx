@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="235" height="10" tilewidth="70" tileheight="70">
+ <tileset firstgid="1" name="grassTiles" tilewidth="70" tileheight="70" spacing="1">
+  <image source="grassTiles.png" width="497" height="212"/>
+ </tileset>
+ <layer name="Background" width="235" height="10">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20LL6AAAAAAAAAAAAC+BiS4AAE=
+  </data>
+ </layer>
+ <layer name="Decoration" width="235" height="10">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20LL6AAAAAAAAAAAAC+BiS4AAE=
+  </data>
+ </layer>
+ <layer name="Decoration-1" width="235" height="10">
+  <data encoding="base64" compression="zlib">
+   eJztwTEBAAAAwqD1T20LL6AAAAAAAAAAAAC+BiS4AAE=
+  </data>
+ </layer>
+ <layer name="Terrain" width="235" height="10">
+  <data encoding="base64" compression="zlib">
+   eJztlVFvwyAMhFnbvbTKlmr9/791RQLpdLOxSbKqD/dJVhMI5jAcLUUIIYQQQgghhBBCCCFynFqIPO9Qsw/QUeP7oLyYM8ODxlrPYp4rBLe9cv4MJyfegew6vlr8B2ux97OCPj4bY6/FH2u1Z/eCz1XXYmlA1qC/wrXk99lzctR5GtUygmtzd/Jy214yeqN+T+vWWuyB/7ewpkd6dcuZWcrYq9h3L3+Z9Wp2Lyyvro4G1hsReTVzTqzz1WHfRPddNG/m3uDazHoVc3t6o/1nvd5czIxXR/f8EZ5mL4z22dNheTWq/2iekT7k8oxbi09j7Cu9egEND/rFtRTo46hs9Wq9137aM9a216eDOvu7VcOlaeo5vXkjLZW9XmX9lt6eE2ucyR1pn/HqzQgca33XwTkXpx3XzuuPtHT2epXz4Rn/BZeqDIA=
+  </data>
+ </layer>
+ <objectgroup name="Objects" width="235" height="10">
+  <object name="PlayerStart" x="0" y="350" width="70" height="70"/>
+  <object name="PlayerGoal" x="16240" y="560" width="70" height="70"/>
+  <object name="coin" x="560" y="280" width="70" height="70"/>
+  <object name="coin" x="1190" y="210" width="70" height="70"/>
+  <object name="coin" x="1610" y="280" width="70" height="70"/>
+  <object name="coin" x="140" y="140" width="70" height="70"/>
+  <object name="coin" x="2380" y="140" width="70" height="70"/>
+  <object name="coin" x="2100" y="210" width="70" height="70"/>
+  <object name="coin" x="2590" y="140" width="70" height="70"/>
+  <object name="coin" x="2800" y="140" width="70" height="70"/>
+  <object name="coin" x="3010" y="210" width="70" height="70"/>
+  <object name="coin" x="3150" y="560" width="70" height="70"/>
+  <object name="coin" x="3850" y="560" width="70" height="70"/>
+  <object name="coin" x="4200" y="280" width="70" height="70"/>
+  <object name="coin" x="4550" y="210" width="70" height="70"/>
+  <object name="coin" x="4970" y="350" width="70" height="70"/>
+  <object name="coin" x="5110" y="560" width="70" height="70"/>
+  <object name="coin" x="5390" y="280" width="70" height="70"/>
+  <object name="coin" x="5670" y="210" width="70" height="70"/>
+  <object name="coin" x="6090" y="350" width="70" height="70"/>
+  <object name="coin" x="6510" y="350" width="70" height="70"/>
+  <object name="coin" x="7070" y="210" width="70" height="70"/>
+  <object name="coin" x="7350" y="280" width="70" height="70"/>
+  <object name="coin" x="7700" y="350" width="70" height="70"/>
+  <object name="coin" x="7910" y="210" width="70" height="70"/>
+  <object name="coin" x="8330" y="210" width="70" height="70"/>
+  <object name="coin" x="8680" y="140" width="70" height="70"/>
+  <object name="coin" x="8960" y="350" width="70" height="70"/>
+  <object name="coin" x="9450" y="280" width="70" height="70"/>
+  <object name="coin" x="9730" y="350" width="70" height="70"/>
+  <object name="coin" x="10010" y="280" width="70" height="70"/>
+  <object name="coin" x="10360" y="350" width="70" height="70"/>
+  <object name="coin" x="10850" y="210" width="70" height="70"/>
+  <object name="coin" x="11200" y="420" width="70" height="70"/>
+  <object name="coin" x="11620" y="210" width="70" height="70"/>
+  <object name="coin" x="12110" y="280" width="70" height="70"/>
+  <object name="coin" x="12460" y="280" width="70" height="70"/>
+  <object name="coin" x="12880" y="350" width="70" height="70"/>
+  <object name="coin" x="13230" y="350" width="70" height="70"/>
+  <object name="coin" x="13440" y="350" width="70" height="70"/>
+  <object name="coin" x="13790" y="210" width="70" height="70"/>
+  <object name="coin" x="14210" y="70" width="70" height="70"/>
+  <object name="coin" x="14560" y="210" width="70" height="70"/>
+  <object name="coin" x="15050" y="140" width="70" height="70"/>
+  <object name="coin" x="15680" y="280" width="70" height="70"/>
+  <object name="coin" x="16100" y="350" width="70" height="70"/>
+  <object name="CheckPoint" x="9030" y="490" width="70" height="70"/>
+  <object name="extra" x="8820" y="280" width="70" height="70"/>
+ </objectgroup>
+ <objectgroup name="Physics" width="235" height="10">
+  <object x="0" y="420" width="280" height="280"/>
+  <object x="1050" y="490" width="280" height="210"/>
+  <object x="1540" y="420" width="210" height="280"/>
+  <object x="490" y="490" width="280" height="210"/>
+  <object x="1890" y="490" width="420" height="210"/>
+  <object x="2380" y="420" width="70" height="70"/>
+  <object x="280" y="420" width="70" height="70"/>
+  <object x="0" y="0" height="420"/>
+  <object x="2590" y="420" width="70" height="280"/>
+  <object x="2800" y="420" width="70" height="280"/>
+  <object x="2940" y="490" width="140" height="210"/>
+  <object x="3150" y="630" width="70" height="70"/>
+  <object x="3290" y="630" width="70" height="70"/>
+  <object x="3570" y="490" width="70" height="210"/>
+  <object x="3780" y="630" width="350" height="70"/>
+  <object x="4200" y="490" width="140" height="210"/>
+  <object x="4480" y="490" width="140" height="210"/>
+  <object x="5180" y="630" width="140" height="70"/>
+  <object x="5390" y="560" width="70" height="140"/>
+  <object x="5600" y="490" width="140" height="210"/>
+  <object x="5880" y="560" width="140" height="140"/>
+  <object x="6160" y="560" width="280" height="140"/>
+  <object x="6580" y="630" width="210" height="70"/>
+  <object x="6860" y="490" width="280" height="210"/>
+  <object x="7280" y="560" width="210" height="140"/>
+  <object x="7630" y="630" width="140" height="70"/>
+  <object x="7910" y="490" width="140" height="210"/>
+  <object x="8190" y="490" width="70" height="210"/>
+  <object x="8400" y="420" width="210" height="280"/>
+  <object x="8750" y="350" width="140" height="350"/>
+  <object x="9030" y="560" width="70" height="140"/>
+  <object x="9240" y="560" width="280" height="140"/>
+  <object x="9660" y="560" width="70" height="140"/>
+  <object x="9800" y="630" width="70" height="70"/>
+  <object x="10010" y="490" width="210" height="210"/>
+  <object x="10360" y="560" width="140" height="140"/>
+  <object x="10640" y="420" width="140" height="280"/>
+  <object x="10920" y="630" width="140" height="70"/>
+  <object x="11200" y="490" width="70" height="210"/>
+  <object x="11410" y="420" width="420" height="280"/>
+  <object x="11970" y="560" width="350" height="140"/>
+  <object x="12460" y="560" width="70" height="140"/>
+  <object x="12670" y="630" width="210" height="70"/>
+  <object x="13020" y="630" width="70" height="70"/>
+  <object x="13230" y="630" width="70" height="70"/>
+  <object x="13440" y="630" width="70" height="70"/>
+  <object x="13650" y="490" width="350" height="210"/>
+  <object x="14140" y="350" width="140" height="350"/>
+  <object x="14420" y="560" width="280" height="140"/>
+  <object x="14840" y="420" width="140" height="280"/>
+  <object x="15190" y="560" width="140" height="140"/>
+  <object x="15540" y="490" width="70"/>
+  <object x="15470" y="490" width="140" height="210"/>
+  <object x="15750" y="560" width="70" height="140"/>
+  <object x="15960" y="560" width="140" height="140"/>
+  <object x="16240" y="630" width="70" height="70"/>
+  <object x="16380" y="490" width="70" height="70"/>
+  <object x="0" y="0" width="1820"/>
+  <object x="1820" y="0" width="1610"/>
+  <object x="3430" y="0" width="1610"/>
+  <object x="5040" y="0" width="1190"/>
+  <object x="6230" y="0" width="1260"/>
+  <object x="7490" y="0" width="1400"/>
+  <object x="8890" y="0" width="980"/>
+  <object x="9870" y="0" width="1330"/>
+  <object x="11200" y="0" width="1330"/>
+  <object x="12530" y="0" width="1330"/>
+  <object x="13860" y="0" width="1540"/>
+  <object x="15400" y="0" width="1050"/>
+  <object x="0" y="0" height="700"/>
+  <object x="4760" y="490" width="280" height="210"/>
+ </objectgroup>
+ <objectgroup name="Enemies" width="235" height="10">
+  <object x="630" y="420" width="70" height="70"/>
+  <object x="1190" y="420" width="70" height="70"/>
+  <object x="2030" y="420" width="70" height="70"/>
+  <object x="2380" y="350" width="70" height="70"/>
+  <object x="2800" y="350" width="70" height="70"/>
+  <object x="3290" y="560" width="70" height="70"/>
+  <object x="3570" y="420" width="70" height="70"/>
+  <object x="4270" y="420" width="70" height="70"/>
+  <object x="5390" y="490" width="70" height="70"/>
+  <object x="5670" y="420" width="70" height="70"/>
+  <object x="5950" y="560" width="70"/>
+  <object x="6300" y="490" width="70" height="70"/>
+  <object x="6650" y="560" width="70" height="70"/>
+  <object x="7350" y="490" width="70" height="70"/>
+  <object x="7700" y="560" width="70" height="70"/>
+  <object x="8190" y="420" width="70" height="70"/>
+  <object x="8470" y="350" width="70" height="70"/>
+  <object x="9660" y="490" width="70" height="70"/>
+  <object x="9800" y="560" width="70" height="70"/>
+  <object x="10430" y="490" width="70" height="70"/>
+  <object x="10990" y="560" width="70" height="70"/>
+  <object x="11550" y="350" width="70" height="70"/>
+  <object x="12110" y="490" width="70" height="70"/>
+  <object x="13020" y="560" width="70" height="70"/>
+  <object x="13230" y="560" width="70" height="70"/>
+  <object x="13440" y="560" width="70" height="70"/>
+  <object x="14210" y="280" width="70" height="70"/>
+  <object x="14910" y="350" width="70" height="70"/>
+  <object x="15190" y="490" width="70" height="70"/>
+  <object x="15540" y="420" width="70" height="70"/>
+  <object x="15960" y="490" width="70" height="70"/>
+ </objectgroup>
+</map>

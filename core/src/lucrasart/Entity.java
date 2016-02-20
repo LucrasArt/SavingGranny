@@ -1,5 +1,6 @@
 package lucrasart;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Rectangle;
@@ -12,6 +13,10 @@ public class Entity {
 	protected float height; 
 	protected Rectangle body; 
 	
+	protected Vector2 direction;
+	
+	protected static float direct;
+	
 	public Entity(float width, float height, Rectangle body) { 
 		this.position = new Vector2();
 		this.width = width;
@@ -20,7 +25,27 @@ public class Entity {
 		body.width = width;
 		body.height = height;
 	}
+	public Entity(float width,float height, Rectangle body, Vector2 direction, Vector2 position)
+	{
+		this.position = position;
+		this.width = width;
+		this.height = height;
+		this.body = body;
+		body.width = width;
+		body.height = height;
+		this.direction = direction;
+	}
 	
+	
+	public Entity(float width,float height, Rectangle body, Vector2 position)
+	{
+		this.position = position;
+		this.width = width;
+		this.height = height;
+		this.body = body;
+		body.width = width;
+		body.height = height;
+	}
 	public void draw(SpriteBatch batch) { 
 		if (region == null)
 			return;
@@ -63,6 +88,17 @@ public class Entity {
 	
 	public static boolean collide(Entity e1, Entity e2) { 
 		return e1.body.overlaps(e2.body);
+	}
+	
+	public void setDirection(float x, float y)
+	{
+		direction.set(x,y);
+		direction.scl(Gdx.graphics.getDeltaTime());
+	}
+	
+	public Rectangle getBounds()
+	{
+		return new Rectangle(position.x,position.y,width,height);
 	}
 }
 
